@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const UserList = () => {
-  const usuarios = [
+  const usersInit = [
     {
       id: 0,
       name: "Eduardo",
@@ -36,17 +36,17 @@ const UserList = () => {
       email: "paco@gmail.com",
     },
   ];
-  const [usuario, usersState] = useState(usuarios);
+  const [users, setUsers] = useState(usersInit);
 
   return (
     <>
       <div>
-        {usuarios.map((usuario) => {
+        {users.map((user) => {
           <div>
-            <p>{usuario.name + usuario.lastName}</p>
-            <p>{usuario.isActive === true ? "active" : "inactive"}</p>
-            <p>{usuario.email}</p>
-            <p>{usuario.image}</p>
+            <p>{user.name + user.lastName}</p>
+            <p>{user.isActive === true ? "active" : "inactive"}</p>
+            <p>{user.email}</p>
+            <p>{user.image}</p>
           </div>;
         })}
       </div>
