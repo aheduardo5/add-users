@@ -3,7 +3,7 @@ import UserActions from "./UserActions";
 
 const User = () => {
   return (
-    <div>
+    <>
       <div className="userContent">
         <a href="">
           <div className="imgStatus"></div> name lastname (test@test.com)
@@ -11,7 +11,7 @@ const User = () => {
         </a>
       </div>
 
-    </div>
+    </>
   );
 };
 
