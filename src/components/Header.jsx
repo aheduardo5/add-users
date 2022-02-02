@@ -1,17 +1,14 @@
 import React from "react";
-
-const Header = ({updateHandler, usersLength, users}) => {
-
+const Header = ({ showFormHandler, usersLength, users }) => {
   return (
     <div>
       <h1>
         user manager({usersLength})
         <span>
-          <button onClick={() => updateHandler(users)}> Agregar</button>
+          <button onClick={ () => showFormHandler() }>show form</button>
         </span>
       </h1>
     </div>
   );
 };
-
 export default Header;
