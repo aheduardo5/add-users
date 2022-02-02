@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import User from "./User"
 
 const UserList = () => {
   const usersInit = [
     {
-      id: 0,
+      id: 1,
       name: "Eduardo",
       lastName: "Aguilar",
       isActive: false,
@@ -11,7 +12,7 @@ const UserList = () => {
       email: "aheduardo5@gmail.com",
     },
     {
-      id: 1,
+      id: 2,
       name: "Elioth",
       lastName: "Perker",
       isActive: false,
@@ -19,7 +20,7 @@ const UserList = () => {
       email: "eliot@gmail.com",
     },
     {
-      id: 2,
+      id: 3,
       name: "Paco",
       lastName: "Porter",
       isActive: false,
@@ -27,7 +28,7 @@ const UserList = () => {
       email: "paco@gmail.com",
     },
     {
-      id: 3,
+      id: 5,
       name: "jsesus",
       lastName: "Porter",
       isActive: false,
@@ -38,18 +39,18 @@ const UserList = () => {
   ];
   const [users, setUsers] = useState(usersInit);
 
+  const deleteHandler = (userId) => {
+      setUsers(users.filter((user) => user.id !== userId));
+    // const usersUpdated = users.filter((user) => user.id !== userId);
+    // setUsers(usersUpdated);
+  };
+
+  const updateHandler = (deletedUser) => {
+      console.log(deletedUser)
+  }
   return (
     <>
-      <div>
-        {users.map((user) => {
-          <div>
-            <p>{user.name + user.lastName}</p>
-            <p>{user.isActive === true ? "active" : "inactive"}</p>
-            <p>{user.email}</p>
-            <p>{user.image}</p>
-          </div>;
-        })}
-      </div>
+    <User users={users} deleteH={deleteHandler} updateH={updateHandler}/>
     </>
   );
 };

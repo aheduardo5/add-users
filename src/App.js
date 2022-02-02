@@ -1,16 +1,16 @@
 import './App.css';
+import Header from './components/Header';
 import UserList from './components/UserList';
-// import Header from './components/Header';
 
 
 function App() {
+
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
       <UserList />
-      </div>
+    </div>
   );
 }
 
 export default App;
-
