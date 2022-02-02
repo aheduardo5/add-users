@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import UserList from "./UserList";
+import AddUser from "./AddUser";
 
 const UserForm = () => {
   const usersInit = [
@@ -107,6 +108,7 @@ const UserForm = () => {
         deleteHandler={deleteHandler}
         updateHandler={showFormHandler}
       />
+      <AddUser />
     </div>
   );
 };
