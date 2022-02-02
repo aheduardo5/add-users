@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import User from "./User"
 
-const UserList = ({users,deleteHandler,updateHandler}) => {
+const UserList = ({users,deleteHandler, updateHandler}) => {
   return (
-    <>
-    <User users={users} deleteH={deleteHandler} updateH={updateHandler}/>
-    </>
+    <div className="UserList">
+    <User users={users} deleteH={deleteHandler} updateHandler={updateHandler}/>
+    </div>
   );
 };
 
