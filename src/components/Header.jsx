@@ -1,13 +1,13 @@
 import React from "react";
 
-const Header = ({updateH}) => {
-  console.log(updateH)
+const Header = ({updateHandler, usersLength}) => {
+
   return (
     <div>
       <h1>
-        user manager()
+        user manager({usersLength})
         <span>
-          <button > Agregar</button>
+          <button onClick={() => updateHandler()}> Agregar</button>
         </span>
       </h1>
     </div>
